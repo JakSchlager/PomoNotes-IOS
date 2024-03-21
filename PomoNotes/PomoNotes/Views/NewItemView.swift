@@ -13,7 +13,7 @@ struct NewItemView: View {
     
     var body: some View {
         VStack {
-            Text("New Note")
+            Text("New Item")
                 .font(.system(size: 32))
                 .bold()
                 .padding(.top, 20)
@@ -29,7 +29,7 @@ struct NewItemView: View {
                 
                 
                 // Button
-                TLButton(title: "Save Note",
+                TLButton(title: "Save Item",
                          backgroundColor: .red) {
                     if viewModel.canSave {
                         viewModel.save()
