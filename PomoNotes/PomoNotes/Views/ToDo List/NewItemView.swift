@@ -13,10 +13,26 @@ struct NewItemView: View {
     
     var body: some View {
         VStack {
-            Text("New Item")
-                .font(.system(size: 32))
-                .bold()
-                .padding(.top, 20)
+            HStack {
+                Spacer()
+                Text("New Item")
+                    .font(.system(size: 32))
+                    .bold()
+                    .padding(.top, 20)
+                    .offset(x: 25)
+                
+                Spacer()
+                
+                Button {
+                    newItemPresented = false
+                } label: {
+                    Image(systemName: "xmark")
+                }
+                .padding()
+                .offset(x: -15, y: 8)
+
+                
+            }
             
             Form {
                 // Title
